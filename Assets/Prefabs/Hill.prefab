@@ -143,7 +143,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -835127324, guid: 242f9e2d40993184b86a5f6612cdf9ff, type: 3}
+  m_Sprite: {fileID: 1908915046, guid: ff82e10631e5ed542880eebb5bcfed3a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 8467418528621214264}
   - component: {fileID: 8467418528621214267}
   m_Layer: 5
-  m_Name: Plane
+  m_Name: Hill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
