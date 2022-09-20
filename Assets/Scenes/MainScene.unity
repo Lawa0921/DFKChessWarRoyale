@@ -12889,6 +12889,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8467418528621214263, guid: be27d4e34f6d04fe2992b90d4d037b23, type: 3}
   m_PrefabInstance: {fileID: 1556313350}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1567198528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 157130617231764704, guid: 18190ea95c6c44fc6887e03496ec4536, type: 3}
+  m_PrefabInstance: {fileID: 4794811797246860747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1575346049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15746,7 +15751,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 157130617231764704, guid: 18190ea95c6c44fc6887e03496ec4536, type: 3}
       propertyPath: m_Name
-      value: Fairy
+      value: Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656318752485131075, guid: 18190ea95c6c44fc6887e03496ec4536, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1963550761, guid: a04a92aa801244801955df406a1e72a3, type: 3}
+    - target: {fileID: 2656318752485131075, guid: 18190ea95c6c44fc6887e03496ec4536, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656318752485131075, guid: 18190ea95c6c44fc6887e03496ec4536, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7763413803599622610, guid: 18190ea95c6c44fc6887e03496ec4536, type: 3}
       propertyPath: m_Pivot.x
@@ -15778,11 +15795,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7763413803599622610, guid: 18190ea95c6c44fc6887e03496ec4536, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 90
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7763413803599622610, guid: 18190ea95c6c44fc6887e03496ec4536, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 90
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763413803599622610, guid: 18190ea95c6c44fc6887e03496ec4536, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763413803599622610, guid: 18190ea95c6c44fc6887e03496ec4536, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7763413803599622610, guid: 18190ea95c6c44fc6887e03496ec4536, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15839,3 +15864,23 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7763413803599622610, guid: 18190ea95c6c44fc6887e03496ec4536, type: 3}
   m_PrefabInstance: {fileID: 4794811797246860747}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &4794811797246860749
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567198528}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f664ba0b53ad64ab9863e58298e411d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
