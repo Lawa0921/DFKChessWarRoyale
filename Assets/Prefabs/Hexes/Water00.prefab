@@ -397,7 +397,6 @@ GameObject:
   - component: {fileID: 8467418528621214266}
   - component: {fileID: 8467418528621214261}
   - component: {fileID: 8467418528621214260}
-  - component: {fileID: 8467418528621214264}
   - component: {fileID: 8467418528621214267}
   m_Layer: 5
   m_Name: Water00
@@ -512,21 +511,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8467418528621214264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8467418528621214262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
 --- !u!114 &8467418528621214267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,3 +525,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalCoordinate: 0
   verticalCoordinate: 0
+  battleHexState: 0
