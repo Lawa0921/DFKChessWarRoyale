@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 8467418528621214266}
   - component: {fileID: 8467418528621214261}
   - component: {fileID: 8467418528621214260}
-  - component: {fileID: 8467418528621214267}
+  - component: {fileID: 7031817070430460506}
   m_Layer: 5
   m_Name: Water00
   m_TagString: Untagged
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8467418528621214267
+--- !u!114 &7031817070430460506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -520,7 +520,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8467418528621214262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78547c4ae4e1e4c9093e08d75e54b7e9, type: 3}
+  m_Script: {fileID: 11500000, guid: ead995068684245fc9f47de8d53c5f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalCoordinate: 0
