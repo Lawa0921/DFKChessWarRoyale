@@ -6,7 +6,8 @@ public class FieldManager : MonoBehaviour
 {
     public RowManager[] allRows;
     public BattleHex[,] allHexesArray;
-    void Start()
+    List<BattleHex> activeHexList = new List<BattleHex>();
+    void Awake()
     {
         allRows = GetComponentsInChildren<RowManager>();
 
@@ -15,7 +16,7 @@ public class FieldManager : MonoBehaviour
             allRows[i].allHexesInRow = allRows[i].GetComponentsInChildren<BattleHex>();
         }
         CreateAllHexesArray();
-        CreateActiveHexesArray();
+        IdentifyHexes();
     }
 
     private void CreateAllHexesArray()
@@ -28,14 +29,14 @@ public class FieldManager : MonoBehaviour
         {
             for (int j = 0; j < widthOfArray; j++)
             {
-                allHexesArray[j, i] = allRows[i].allHexesInRow[widthOfArray - j - 1];
-                allHexesArray[j, i].verticalCoordinate = heightOfArray - i;
-                allHexesArray[j, i].horizontalCoordinate = widthOfArray - j;
+                allHexesArray[j, i] = allRows[heightOfArray - i - 1].allHexesInRow[j];
+                allHexesArray[j, i].verticalCoordinate = i + 1;
+                allHexesArray[j, i].horizontalCoordinate = j + 1;
             }
         }
     }
 
-    private void CreateActiveHexesArray()
+    private void IdentifyHexes()
     {
         foreach (BattleHex hex in allHexesArray)
         {
@@ -46,6 +47,18 @@ public class FieldManager : MonoBehaviour
             else
             {
                 hex.SetActive();
+            }
+        }
+        CreateActiveHexList();
+    }
+
+    private void CreateActiveHexList()
+    {
+        foreach (BattleHex hex in allHexesArray)
+        {
+            if (hex.battleHexState == HexState.active)
+            {
+                activeHexList.Add(hex);
             }
         }
     }
