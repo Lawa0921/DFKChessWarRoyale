@@ -28,8 +28,8 @@ public class FieldManager : MonoBehaviour
             for (int j = 0; j < widthOfArray; j++)
             {
                 allHexesArray[j, i] = allRows[i].allHexesInRow[widthOfArray - j - 1];
-                allHexesArray[j, i].verticalCoordinate = widthOfArray - i;
-                allHexesArray[j, i].horizontalCoordinate = heightOfArray - j;
+                allHexesArray[j, i].verticalCoordinate = heightOfArray - i;
+                allHexesArray[j, i].horizontalCoordinate = widthOfArray - j;
             }
         }
     }

@@ -22,4 +22,17 @@ public class BattleHex : MonoBehaviour
     {
         
     }
+
+    public void SetActive()
+    {
+        battleHexState = HexState.active;
+    }
+
+    public void SetInActive()
+    {
+        if (battleHexState != HexState.active)
+        {
+            LandSpace.color = new Color32(170, 170, 170, 255);
+        }
+    }
 }
