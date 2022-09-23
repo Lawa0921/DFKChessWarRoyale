@@ -28,23 +28,25 @@ public class NeighboursFinder : MonoBehaviour
         int initialX = startingHex.horizontalCoordinate - 1;
         int initialY = startingHex.verticalCoordinate - 1;
 
-        if (initialY % 2 == 0)
+        for (int x = -1; x <= 1; x++)
         {
-            allNeighbours.Add(allHexexArray[initialX + 1, initialY]);
-            allNeighbours.Add(allHexexArray[initialX, initialY + 1]);
-            allNeighbours.Add(allHexexArray[initialX - 1, initialY]);
-            allNeighbours.Add(allHexexArray[initialX + 1, initialY - 1]);
-            allNeighbours.Add(allHexexArray[initialX + 1, initialY + 1]);
-            allNeighbours.Add(allHexexArray[initialX, initialY - 1]);
-        }
-        else
-        {
-            allNeighbours.Add(allHexexArray[initialX + 1, initialY]);
-            allNeighbours.Add(allHexexArray[initialX, initialY + 1]);
-            allNeighbours.Add(allHexexArray[initialX - 1, initialY]);
-            allNeighbours.Add(allHexexArray[initialX, initialY - 1]);
-            allNeighbours.Add(allHexexArray[initialX - 1, initialY + 1]);
-            allNeighbours.Add(allHexexArray[initialX - 1, initialY - 1]);
+            for (int y = -1; y <= 1; y++)
+            {
+                if (initialY % 2 == 0)
+                {
+                    if (!(x == -1 && y == 1) && !(x == -1 && y == -1) && allHexexArray[initialX + x, initialY + y].battleHexState == HexState.active)
+                    {
+                        allNeighbours.Add(allHexexArray[initialX + x, initialY + y]);
+                    }
+                }
+                else
+                {
+                    if (!(x == 1 && y == 1) && !(x == 1 && y == -1) && allHexexArray[initialX + x, initialY + y].battleHexState == HexState.active)
+                    {
+                        allNeighbours.Add(allHexexArray[initialX + x, initialY + y]);
+                    }
+                }
+            }
         }
 
         foreach (BattleHex hex in allNeighbours)
