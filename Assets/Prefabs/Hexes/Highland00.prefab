@@ -523,3 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20bd131027614d06b40ef30e29bc1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalCoordinate: 0
+  verticalCoordinate: 0
+  battleHexState: 0
+  LandSpace: {fileID: 5431686962091953559}

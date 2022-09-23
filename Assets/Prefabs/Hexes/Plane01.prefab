@@ -526,3 +526,4 @@ MonoBehaviour:
   horizontalCoordinate: 0
   verticalCoordinate: 0
   battleHexState: 0
+  LandSpace: {fileID: 5431686962091953559}

@@ -447,6 +447,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed56246dd233b463a8ec3adfae80fdc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalCoordinate: 0
+  verticalCoordinate: 0
+  battleHexState: 0
+  LandSpace: {fileID: 5431686962091953559}
 --- !u!1 &9117493578273770012
 GameObject:
   m_ObjectHideFlags: 0

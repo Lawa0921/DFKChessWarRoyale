@@ -397,6 +397,7 @@ GameObject:
   - component: {fileID: 8467418528621214266}
   - component: {fileID: 8467418528621214261}
   - component: {fileID: 8467418528621214260}
+  - component: {fileID: 4920086886972263021}
   m_Layer: 5
   m_Name: Mountain00
   m_TagString: Untagged
@@ -510,3 +511,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4920086886972263021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8467418528621214262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9181ed4e367d34ea687870c53ee28f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalCoordinate: 0
+  verticalCoordinate: 0
+  battleHexState: 0
+  LandSpace: {fileID: 5431686962091953559}
