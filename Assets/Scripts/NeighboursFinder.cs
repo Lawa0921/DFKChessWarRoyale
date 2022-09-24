@@ -18,7 +18,7 @@ public class NeighboursFinder : MonoBehaviour
         
     }
 
-    static public void GetAdjacentHexes(BattleHex startingHex)
+    static public List<BattleHex> GetAdjacentHexes(BattleHex startingHex)
     {
         int initialX = startingHex.horizontalCoordinate - 1;
         int initialY = startingHex.verticalCoordinate - 1;
@@ -45,5 +45,12 @@ public class NeighboursFinder : MonoBehaviour
                 }
             }
         }
+    }
+
+    static private bool EvaluateIfItIsNewHex(BattleHex evaluateHex)
+    {
+        return evaluateHex.battleHexState == HexState.active &&
+            !evaluateHex.isIncluded &&
+            !evaluateHex.isNeighboringHex;
     }
 }

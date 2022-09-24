@@ -13,6 +13,8 @@ public class BattleHex : MonoBehaviour
     public Image LandSpace;
     [SerializeField] Image currentState;
     public bool isStartingHex = false;
+    public bool isNeighboringHex = false;
+    public bool isIncluded = false;
 
     public void SetActive()
     {
