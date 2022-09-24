@@ -11,6 +11,7 @@ public class BattleHex : MonoBehaviour
     public int verticalCoordinate;
     public HexState battleHexState;
     public Image LandSpace;
+    [SerializeField] Image currentState;
     public bool isStartingHex = false;
 
     public void SetActive()
@@ -24,5 +25,10 @@ public class BattleHex : MonoBehaviour
         {
             LandSpace.color = new Color32(170, 170, 170, 255);
         }
+    }
+
+    public void SetAvailable()
+    {
+        LandSpace.color = new Color32(120, 180, 200, 255);
     }
 }

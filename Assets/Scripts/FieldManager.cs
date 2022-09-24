@@ -5,8 +5,8 @@ using UnityEngine;
 public class FieldManager : MonoBehaviour
 {
     public RowManager[] allRows;
-    public BattleHex[,] allHexesArray;
-    List<BattleHex> activeHexList = new List<BattleHex>();
+    static public BattleHex[,] allHexesArray;
+    static List<BattleHex> activeHexList = new List<BattleHex>();
     void Awake()
     {
         allRows = GetComponentsInChildren<RowManager>();

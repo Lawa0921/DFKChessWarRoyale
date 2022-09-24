@@ -5,15 +5,11 @@ using UnityEngine;
 public class NeighboursFinder : MonoBehaviour
 {
     private BattleHex startingHex;
-    private List<BattleHex> allNeighbours = new List<BattleHex>();
-    private FieldManager sceneManager;
-    private BattleHex[,] allHexexArray;
+    static private List<BattleHex> allNeighbours = new List<BattleHex>();
     // Start is called before the first frame update
     void Start()
     {
-        sceneManager = FindObjectOfType<FieldManager>();
-        allHexexArray = sceneManager.allHexesArray;
-        GetAdjacentHexes();
+        GetAdjacentHexes(GetComponentInParent<BattleHex>());
     }
 
     // Update is called once per frame
@@ -22,9 +18,8 @@ public class NeighboursFinder : MonoBehaviour
         
     }
 
-    public void GetAdjacentHexes()
+    static public void GetAdjacentHexes(BattleHex startingHex)
     {
-        startingHex = GetComponentInParent<BattleHex>();
         int initialX = startingHex.horizontalCoordinate - 1;
         int initialY = startingHex.verticalCoordinate - 1;
 
@@ -34,24 +29,21 @@ public class NeighboursFinder : MonoBehaviour
             {
                 if (initialY % 2 == 0)
                 {
-                    if (!(x == -1 && y == 1) && !(x == -1 && y == -1) && allHexexArray[initialX + x, initialY + y].battleHexState == HexState.active)
+                    if (!(x == -1 && y == 1) && !(x == -1 && y == -1) && FieldManager.allHexesArray[initialX + x, initialY + y].battleHexState == HexState.active)
                     {
-                        allNeighbours.Add(allHexexArray[initialX + x, initialY + y]);
+                        allNeighbours.Add(FieldManager.allHexesArray[initialX + x, initialY + y]);
+                        FieldManager.allHexesArray[initialX + x, initialY + y].SetAvailable();
                     }
                 }
                 else
                 {
-                    if (!(x == 1 && y == 1) && !(x == 1 && y == -1) && allHexexArray[initialX + x, initialY + y].battleHexState == HexState.active)
+                    if (!(x == 1 && y == 1) && !(x == 1 && y == -1) && FieldManager.allHexesArray[initialX + x, initialY + y].battleHexState == HexState.active)
                     {
-                        allNeighbours.Add(allHexexArray[initialX + x, initialY + y]);
+                        allNeighbours.Add(FieldManager.allHexesArray[initialX + x, initialY + y]);
+                        FieldManager.allHexesArray[initialX + x, initialY + y].SetAvailable();
                     }
                 }
             }
-        }
-
-        foreach (BattleHex hex in allNeighbours)
-        {
-            hex.LandSpace.color = new Color32(120, 180, 200, 255);
         }
     }
 }
