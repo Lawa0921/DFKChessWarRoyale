@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class AvailablePos : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private int step;
+    List<BattleHex> initialHexes = new List<BattleHex>();
+    PositionForFlying AdjFinder = new PositionForFlying();
+
+    public void GetAvailablePositions(BattleHex startingHex, int stepsLimit)
     {
-        
+        AdjFinder.GetAdjacentHexesExtended(startingHex);
+
+        for (step = 2; step <= stepsLimit; step++)
+        {
+            initialHexes = GetNewInitialHexes();
+            foreach (BattleHex hex in initialHexes)
+            {
+                AdjFinder.GetAdjacentHexesExtended(hex);
+                hex.isIncluded = true;
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    internal List<BattleHex> GetNewInitialHexes()
     {
-        
+        initialHexes.Clear();
+        foreach (BattleHex hex in FieldManager.allHexesArray)
+        {
+            if (hex.isNeighboringHex && !hex.isIncluded)
+            {
+                initialHexes.Add(hex);
+            }
+        }
+
+        return initialHexes;
     }
 }

@@ -7,6 +7,7 @@ public class FieldManager : MonoBehaviour
     public RowManager[] allRows;
     static public BattleHex[,] allHexesArray;
     static List<BattleHex> activeHexList = new List<BattleHex>();
+
     void Awake()
     {
         allRows = GetComponentsInChildren<RowManager>();
@@ -16,7 +17,13 @@ public class FieldManager : MonoBehaviour
             allRows[i].allHexesInRow = allRows[i].GetComponentsInChildren<BattleHex>();
         }
         CreateAllHexesArray();
+    }
+
+    private void Start()
+    {
         IdentifyHexes();
+        AvailablePos hero = FindObjectOfType<AvailablePos>();
+        hero.GetAvailablePositions(hero.GetComponentInParent<BattleHex>(), 3);
     }
 
     private void CreateAllHexesArray()

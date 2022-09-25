@@ -31,6 +31,6 @@ public class BattleHex : MonoBehaviour
 
     public void SetAvailable()
     {
-        LandSpace.color = new Color32(120, 180, 200, 255);
+        currentState.color = new Color32(255, 255, 255, 255);
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
 
 public class NeighboursFinder : MonoBehaviour
@@ -27,30 +28,33 @@ public class NeighboursFinder : MonoBehaviour
         {
             for (int y = -1; y <= 1; y++)
             {
-                if (initialY % 2 == 0)
+                if (EvaluateIfItIsNewHex(FieldManager.allHexesArray[initialX + x, initialY + y], x, y))
                 {
-                    if (!(x == -1 && y == 1) && !(x == -1 && y == -1) && FieldManager.allHexesArray[initialX + x, initialY + y].battleHexState == HexState.active)
-                    {
-                        allNeighbours.Add(FieldManager.allHexesArray[initialX + x, initialY + y]);
-                        FieldManager.allHexesArray[initialX + x, initialY + y].SetAvailable();
-                    }
-                }
-                else
-                {
-                    if (!(x == 1 && y == 1) && !(x == 1 && y == -1) && FieldManager.allHexesArray[initialX + x, initialY + y].battleHexState == HexState.active)
-                    {
-                        allNeighbours.Add(FieldManager.allHexesArray[initialX + x, initialY + y]);
-                        FieldManager.allHexesArray[initialX + x, initialY + y].SetAvailable();
-                    }
+                    allNeighbours.Add(FieldManager.allHexesArray[initialX + x, initialY + y]);
+                    FieldManager.allHexesArray[initialX + x, initialY + y].SetAvailable();
                 }
             }
         }
+        return allNeighbours;
     }
 
-    static private bool EvaluateIfItIsNewHex(BattleHex evaluateHex)
+    static private bool EvaluateIfItIsNewHex(BattleHex evaluateHex, int horizontalValueAdded, int verticalValueAdded)
     {
-        return evaluateHex.battleHexState == HexState.active &&
-            !evaluateHex.isIncluded &&
-            !evaluateHex.isNeighboringHex;
+        if (evaluateHex.verticalCoordinate % 2 != 0)
+        {
+            return evaluateHex.battleHexState == HexState.active &&
+                !evaluateHex.isIncluded &&
+                !evaluateHex.isNeighboringHex &&
+                !(horizontalValueAdded == 1 && verticalValueAdded == 1) &&
+                !(horizontalValueAdded == 1 && verticalValueAdded == -1);
+        }
+        else
+        {
+            return evaluateHex.battleHexState == HexState.active &&
+                !evaluateHex.isIncluded &&
+                !evaluateHex.isNeighboringHex &&
+                !(horizontalValueAdded == -1 && verticalValueAdded == 1) &&
+                !(horizontalValueAdded == -1 && verticalValueAdded == -1);
+        }
     }
 }
