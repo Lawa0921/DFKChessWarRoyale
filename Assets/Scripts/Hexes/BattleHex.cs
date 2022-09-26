@@ -11,10 +11,16 @@ public class BattleHex : MonoBehaviour
     public int verticalCoordinate;
     public HexState battleHexState;
     public Image LandSpace;
+    public ClickOnHex clickOnHex;
     [SerializeField] Image currentState;
     public bool isStartingHex = false;
     public bool isNeighboringHex = false;
     public bool isIncluded = false;
+
+    private void Awake()
+    {
+        clickOnHex = GetComponent<ClickOnHex>();
+    }
 
     public void SetActive()
     {
@@ -31,6 +37,13 @@ public class BattleHex : MonoBehaviour
 
     public void SetAvailable()
     {
+        currentState.sprite = clickOnHex.fieldManager.availableToMove;
         currentState.color = new Color32(255, 255, 255, 255);
+    }
+
+    public void MakeTargetToMove()
+    {
+        clickOnHex.isTargetHex = true;
+        currentState.sprite = clickOnHex.fieldManager.availableAsTarget;
     }
 }

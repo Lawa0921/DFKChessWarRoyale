@@ -7352,6 +7352,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 893231573}
     m_Modifications:
+    - target: {fileID: 8467418528621214260, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.8584906
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467418528621214260, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0.46526432
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467418528621214260, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.028346404
+      objectReference: {fileID: 0}
     - target: {fileID: 8467418528621214262, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
       propertyPath: m_Name
       value: Plane00 (15)
@@ -38591,6 +38603,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allRows: []
+  availableAsTarget: {fileID: -1081589634, guid: f1d86e4852e36420cb3277b6b394eba4, type: 3}
+  notAvailable: {fileID: -1602845966, guid: b65f83c8ecf874636b91a5d39c90dce3, type: 3}
+  availableToMove: {fileID: 324795159, guid: af33337d4704b46b0a124072433874b9, type: 3}
 --- !u!1001 &1720132949
 PrefabInstance:
   m_ObjectHideFlags: 0

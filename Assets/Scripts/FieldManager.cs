@@ -6,7 +6,10 @@ public class FieldManager : MonoBehaviour
 {
     public RowManager[] allRows;
     static public BattleHex[,] allHexesArray;
-    static List<BattleHex> activeHexList = new List<BattleHex>();
+    static public List<BattleHex> activeHexList = new List<BattleHex>();
+    public Sprite availableAsTarget;
+    public Sprite notAvailable;
+    public Sprite availableToMove;
 
     void Awake()
     {
