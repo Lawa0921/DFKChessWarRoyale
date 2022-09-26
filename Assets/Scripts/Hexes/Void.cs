@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Void : BattleHex
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void SetAvailable()
     {
-        
+        currentState.color = new Color32(255, 255, 255, 0);
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void MakeTargetToMove()
     {
-        
+        clickOnHex.ClearPreviousSelectionOfTargetHex();
     }
 }

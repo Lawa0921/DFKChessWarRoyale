@@ -12,7 +12,7 @@ public class BattleHex : MonoBehaviour
     public HexState battleHexState;
     public Image LandSpace;
     public ClickOnHex clickOnHex;
-    [SerializeField] Image currentState;
+    [SerializeField] protected Image currentState;
     public bool isStartingHex = false;
     public bool isNeighboringHex = false;
     public bool isIncluded = false;
@@ -35,13 +35,13 @@ public class BattleHex : MonoBehaviour
         }
     }
 
-    public void SetAvailable()
+    public virtual void SetAvailable()
     {
         currentState.sprite = clickOnHex.fieldManager.availableToMove;
         currentState.color = new Color32(255, 255, 255, 255);
     }
 
-    public void MakeTargetToMove()
+    public virtual void MakeTargetToMove()
     {
         clickOnHex.isTargetHex = true;
         currentState.sprite = clickOnHex.fieldManager.availableAsTarget;

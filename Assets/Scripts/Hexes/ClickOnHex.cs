@@ -17,10 +17,22 @@ public class ClickOnHex : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        ClearPreviousSelectionOfTargetHex();
         if (hex.isNeighboringHex)
         {
-            print("lalalalalala");
             hex.MakeTargetToMove();
+        }
+    }
+
+    public void ClearPreviousSelectionOfTargetHex()
+    {
+        foreach (BattleHex hex in FieldManager.activeHexList)
+        {
+            if (hex.clickOnHex.isTargetHex == true)
+            {
+                hex.GetComponent<ClickOnHex>().isTargetHex = false;
+                hex.SetAvailable();
+            }
         }
     }
 }
