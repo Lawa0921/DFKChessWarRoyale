@@ -6,9 +6,8 @@ public class AvailablePos : MonoBehaviour
 {
     private int step;
     List<BattleHex> initialHexes = new List<BattleHex>();
-    PositionForFlying AdjFinder = new PositionForFlying();
 
-    public void GetAvailablePositions(BattleHex startingHex, int stepsLimit)
+    public void GetAvailablePositions(BattleHex startingHex, int stepsLimit, IAdjacentFinder AdjFinder)
     {
         AdjFinder.GetAdjacentHexesExtended(startingHex);
 

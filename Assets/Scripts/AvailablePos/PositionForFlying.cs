@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PositionForFlying : MonoBehaviour
+public class PositionForFlying : MonoBehaviour, IAdjacentFinder
 {
     public void GetAdjacentHexesExtended(BattleHex initialHex)
     {

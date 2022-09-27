@@ -26,7 +26,8 @@ public class FieldManager : MonoBehaviour
     {
         IdentifyHexes();
         AvailablePos hero = FindObjectOfType<AvailablePos>();
-        hero.GetAvailablePositions(hero.GetComponentInParent<BattleHex>(), 3);
+        IAdjacentFinder adjFinder = new PositionForFlying();
+        hero.GetAvailablePositions(hero.GetComponentInParent<BattleHex>(), 3, adjFinder);
     }
 
     private void CreateAllHexesArray()
