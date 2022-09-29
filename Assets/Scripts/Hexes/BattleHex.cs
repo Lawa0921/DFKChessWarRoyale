@@ -46,6 +46,13 @@ public class BattleHex : MonoBehaviour
     public virtual void MakeTargetToMove()
     {
         clickOnHex.isTargetHex = true;
+        BattleController.targetToMove = this;
         currentState.sprite = clickOnHex.fieldManager.availableAsTarget;
+    }
+
+    public void DefineSelfAsStartingHex()
+    {
+        isStartingHex = true;
+        distanceText.stepsToGo = 1;
     }
 }

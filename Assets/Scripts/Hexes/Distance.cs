@@ -21,4 +21,16 @@ public class Distance : MonoBehaviour
         distanceText.text = distanceFromStartingPoint.ToString();
         distanceText.color = new Color32(255, 255, 255, 255);
     }
+
+    public bool EvaluateDistance(BattleHex initialHex)
+    {
+        return distanceFromStartingPoint + stepsToGo == initialHex.distanceText.distanceFromStartingPoint;
+    }
+
+    public int MakeSelfPartOfOptimalPath()
+    {
+        OptimalPath.optimailPath.Add(hex);
+        hex.LandSpace.color = new Color32(150, 150, 150, 255);
+        return stepsToGo;
+    }
 }

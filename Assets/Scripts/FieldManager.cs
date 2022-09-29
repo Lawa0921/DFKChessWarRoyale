@@ -28,8 +28,7 @@ public class FieldManager : MonoBehaviour
         AvailablePos hero = FindObjectOfType<AvailablePos>();
         IAdjacentFinder adjFinder = new PositionForFlying();
         BattleHex startingHex = hero.GetComponentInParent<BattleHex>();
-        startingHex.isStartingHex = true;
-        startingHex.distanceText.stepsToGo = 1;
+        startingHex.DefineSelfAsStartingHex();
         hero.GetAvailablePositions(hero.GetComponentInParent<BattleHex>(), 3, adjFinder);
     }
 

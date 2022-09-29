@@ -21,6 +21,7 @@ public class ClickOnHex : MonoBehaviour, IPointerClickHandler
         if (hex.isNeighboringHex)
         {
             hex.MakeTargetToMove();
+            BattleController.currentAtacker.GetComponent<OptimalPath>().MatchPath();
         }
     }
 

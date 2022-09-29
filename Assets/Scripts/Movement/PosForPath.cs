@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PositionForGround : MonoBehaviour, IAdjacentFinder
+public class PosForPath : MonoBehaviour, IAdjacentFinder
 {
-    IEvaluateHex checkHex = new IfItIsNewHex();
+    IEvaluateHex checkHex = new IfItIsOptimalPath();
 
     public void GetAdjacentHexesExtended(BattleHex initialHex)
     {
         List<BattleHex> neighboursToCheck = NeighboursFinder.GetAdjacentHexes(initialHex, checkHex);
         foreach (BattleHex hex in neighboursToCheck)
         {
-            hex.isNeighboringHex = true;
-            hex.distanceText.SetDistanceFromStartingHex(initialHex);
+            if (hex.distanceText.EvaluateDistance(initialHex))
+            {
+                OptimalPath.nextStep = hex;
+                break;
+            }
         }
     }
 }
