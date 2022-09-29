@@ -12,6 +12,8 @@ public class BattleHex : MonoBehaviour
     public HexState battleHexState;
     public Image LandSpace;
     public ClickOnHex clickOnHex;
+    public Distance distanceText;
+    public DeploymentPos deploymentPos;
     [SerializeField] protected Image currentState;
     public bool isStartingHex = false;
     public bool isNeighboringHex = false;

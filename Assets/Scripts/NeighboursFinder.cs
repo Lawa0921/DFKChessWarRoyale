@@ -43,7 +43,7 @@ public class NeighboursFinder : MonoBehaviour
         if (evaluateHex.verticalCoordinate % 2 != 0)
         {
             return evaluateHex.battleHexState == HexState.active &&
-                !evaluateHex.isIncluded &&
+                !evaluateHex.isStartingHex &&
                 !evaluateHex.isNeighboringHex &&
                 !(horizontalValueAdded == 1 && verticalValueAdded == 1) &&
                 !(horizontalValueAdded == 1 && verticalValueAdded == -1);
@@ -51,7 +51,7 @@ public class NeighboursFinder : MonoBehaviour
         else
         {
             return evaluateHex.battleHexState == HexState.active &&
-                !evaluateHex.isIncluded &&
+                !evaluateHex.isStartingHex &&
                 !evaluateHex.isNeighboringHex &&
                 !(horizontalValueAdded == -1 && verticalValueAdded == 1) &&
                 !(horizontalValueAdded == -1 && verticalValueAdded == -1);
