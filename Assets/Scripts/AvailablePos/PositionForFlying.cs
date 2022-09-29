@@ -10,6 +10,7 @@ public class PositionForFlying : MonoBehaviour, IAdjacentFinder
         foreach (BattleHex hex in neighboursToCheck)
         {
             hex.isNeighboringHex = true;
+            hex.distanceText.SetDistanceFromStartingHex(initialHex);
         }
     }
 }

@@ -6,6 +6,11 @@ public class PositionForGround : MonoBehaviour, IAdjacentFinder
 {
     public void GetAdjacentHexesExtended(BattleHex initialHex)
     {
-
+        List<BattleHex> neighboursToCheck = NeighboursFinder.GetAdjacentHexes(initialHex);
+        foreach (BattleHex hex in neighboursToCheck)
+        {
+            hex.isNeighboringHex = true;
+            hex.distanceText.SetDistanceFromStartingHex(initialHex);
+        }
     }
 }

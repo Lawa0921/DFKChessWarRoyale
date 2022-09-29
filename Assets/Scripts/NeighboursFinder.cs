@@ -13,14 +13,10 @@ public class NeighboursFinder : MonoBehaviour
         GetAdjacentHexes(GetComponentInParent<BattleHex>());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     static public List<BattleHex> GetAdjacentHexes(BattleHex startingHex)
     {
+        allNeighbours.Clear();
         int initialX = startingHex.horizontalCoordinate - 1;
         int initialY = startingHex.verticalCoordinate - 1;
 
