@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7763413803599622610}
   - component: {fileID: 2656318752485131075}
-  - component: {fileID: 1624326606620700028}
   - component: {fileID: 6994370733016578203}
   - component: {fileID: 8353078527079794618}
   - component: {fileID: 4331842182699696990}
+  - component: {fileID: 3023358689991235298}
+  - component: {fileID: 7637558464570604523}
   m_Layer: 5
   m_Name: Dragoon
   m_TagString: Untagged
@@ -93,26 +94,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1624326606620700028
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 157130617231764704}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 93af2230410234e47b2255527aac6248, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &6994370733016578203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,3 +131,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f580a8a08d2044245b7e5dcf8b4487f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3023358689991235298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157130617231764704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb9bb34ec7a3b4fdc9fcc0666fcc92d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &7637558464570604523
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157130617231764704}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3ac02766ac22340baa53eb02426edfd4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

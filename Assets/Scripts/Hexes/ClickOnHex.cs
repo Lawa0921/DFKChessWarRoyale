@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class ClickOnHex : MonoBehaviour, IPointerClickHandler
 {
     private BattleHex hex;
-    public bool isTargetHex;
+    public bool isTargetToMove = false;
     public FieldManager fieldManager;
 
     private void Awake()
@@ -16,6 +16,18 @@ public class ClickOnHex : MonoBehaviour, IPointerClickHandler
     }
 
     public void OnPointerClick(PointerEventData eventData)
+    {
+        if (!isTargetToMove)
+        {
+            SelectTargetToMove();
+        }
+        else
+        {
+            BattleController.currentAtacker.GetComponent<Move>().StartsMoving();
+        }
+    }
+
+    private void SelectTargetToMove()
     {
         ClearPreviousSelectionOfTargetHex();
         if (hex.isNeighboringHex)
@@ -29,9 +41,9 @@ public class ClickOnHex : MonoBehaviour, IPointerClickHandler
     {
         foreach (BattleHex hex in FieldManager.activeHexList)
         {
-            if (hex.clickOnHex.isTargetHex == true)
+            if (hex.clickOnHex.isTargetToMove == true)
             {
-                hex.GetComponent<ClickOnHex>().isTargetHex = false;
+                hex.GetComponent<ClickOnHex>().isTargetToMove = false;
                 hex.SetAvailable();
             }
         }
