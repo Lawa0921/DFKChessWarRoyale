@@ -46,6 +46,7 @@ public class ClickOnHex : MonoBehaviour, IPointerClickHandler
                 hex.GetComponent<ClickOnHex>().isTargetToMove = false;
                 hex.SetAvailable();
             }
+            hex.LandSpace.color = new Color32(250, 250, 250, 250);
         }
     }
 }
