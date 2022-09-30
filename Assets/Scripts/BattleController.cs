@@ -7,7 +7,7 @@ public class BattleController : MonoBehaviour
     public static BattleHex targetToMove;
     public static Hero currentAtacker;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         currentAtacker = FindObjectOfType<Hero>();
     }
