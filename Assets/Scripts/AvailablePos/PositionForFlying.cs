@@ -13,6 +13,7 @@ public class PositionForFlying : MonoBehaviour, IAdjacentFinder
         {
             hex.isNeighboringHex = true;
             hex.distanceText.SetDistanceFromStartingHex(initialHex);
+            hex.SetAvailable();
         }
     }
 }

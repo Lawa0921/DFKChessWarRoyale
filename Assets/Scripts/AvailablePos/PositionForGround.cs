@@ -13,6 +13,7 @@ public class PositionForGround : MonoBehaviour, IAdjacentFinder
         {
             hex.isNeighboringHex = true;
             hex.distanceText.SetDistanceFromStartingHex(initialHex);
+            hex.SetAvailable();
         }
     }
 }
