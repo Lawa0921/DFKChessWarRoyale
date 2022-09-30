@@ -13,4 +13,14 @@ public class Void : BattleHex
     {
         clickOnHex.ClearPreviousSelectionOfTargetHex();
     }
+
+    public override bool AvailableForGround()
+    {
+        return false;
+    }
+
+    public override bool AvailableForFlying()
+    {
+        return false;
+    }
 }

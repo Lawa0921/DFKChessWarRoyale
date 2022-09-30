@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PositionForFlying : MonoBehaviour, IAdjacentFinder
 {
-    IEvaluateHex checkHex = new IfItIsNewHex();
+    IEvaluateHex checkHex = new IfItIsNewFlying();
 
     public void GetAdjacentHexesExtended(BattleHex initialHex)
     {
@@ -12,7 +12,7 @@ public class PositionForFlying : MonoBehaviour, IAdjacentFinder
         foreach (BattleHex hex in neighboursToCheck)
         {
             hex.isNeighboringHex = true;
-            hex.distanceText.SetDistanceFromStartingHex(initialHex);
+            hex.distanceText.SetDistanceForFlyingUnit(initialHex);
             hex.SetAvailable();
         }
     }

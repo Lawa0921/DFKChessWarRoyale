@@ -93,5 +93,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c27abf7e140e14ebea352c3ebcb597b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceFromStartingPoint: 0
+  distanceFromStartingPoint: 20
   stepsToGo: 1

@@ -15,4 +15,9 @@ public class Mountain : BattleHex
     {
         
     }
+
+    public override bool AvailableForGround()
+    {
+        return false;
+    }
 }

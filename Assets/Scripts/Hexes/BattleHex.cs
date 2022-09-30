@@ -56,4 +56,14 @@ public class BattleHex : MonoBehaviour
         isStartingHex = true;
         distanceText.stepsToGo = 1;
     }
+
+    public virtual bool AvailableForGround()
+    {
+        return true;
+    }
+
+    public virtual bool AvailableForFlying()
+    {
+        return true;
+    }
 }

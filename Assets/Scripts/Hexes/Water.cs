@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class Water : BattleHex
 {
-    // Start is called before the first frame update
-    void Start()
+    public override bool AvailableForGround()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return false;
     }
 }
