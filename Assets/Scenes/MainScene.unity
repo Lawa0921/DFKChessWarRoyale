@@ -20645,7 +20645,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 107037694}
+    m_TransformParent: {fileID: 2024257007}
     m_Modifications:
     - target: {fileID: 157130617231764704, guid: 3e6641d60b67a4dbc8f69e8ae487b2c5, type: 3}
       propertyPath: m_Name
@@ -20653,7 +20653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6994370733016578203, guid: 3e6641d60b67a4dbc8f69e8ae487b2c5, type: 3}
       propertyPath: velocity
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7763413803599622610, guid: 3e6641d60b67a4dbc8f69e8ae487b2c5, type: 3}
       propertyPath: m_Pivot.x
@@ -20709,15 +20709,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7763413803599622610, guid: 3e6641d60b67a4dbc8f69e8ae487b2c5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7763413803599622610, guid: 3e6641d60b67a4dbc8f69e8ae487b2c5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7763413803599622610, guid: 3e6641d60b67a4dbc8f69e8ae487b2c5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7763413803599622610, guid: 3e6641d60b67a4dbc8f69e8ae487b2c5, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -40350,6 +40350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39cda0bd6702d4ed6a5c1f4008cfe8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charAttributes: {fileID: 11400000, guid: 50cc0058f2c894d469bc8ad4e22ea274, type: 2}
 --- !u!4 &1808184110
 Transform:
   m_ObjectHideFlags: 0
