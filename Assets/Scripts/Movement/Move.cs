@@ -17,7 +17,7 @@ public class Move : MonoBehaviour
 
     private void Start()
     {
-        hero = GetComponent<Hero>();
+        hero = GetComponent<Dragoon>();
         heroSprite = GetComponent<SpriteRenderer>();
     }
 
@@ -41,6 +41,7 @@ public class Move : MonoBehaviour
     void ResetTargetPos()
     {
         targetPos = new Vector3(path[currentStep].transform.position.x, path[currentStep].transform.position.y, transform.position.z);
+        ControlDirection(targetPos);
     }
 
     void HeroIsMoving()

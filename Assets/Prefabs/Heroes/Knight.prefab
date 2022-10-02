@@ -11,7 +11,10 @@ GameObject:
   - component: {fileID: 7763413803599622610}
   - component: {fileID: 2656318752485131075}
   - component: {fileID: 1624326606620700028}
-  - component: {fileID: 4654261480510503302}
+  - component: {fileID: 5989671087377724644}
+  - component: {fileID: 6358739586473183857}
+  - component: {fileID: 2532899929959745572}
+  - component: {fileID: 4561737818235946715}
   m_Layer: 5
   m_Name: Knight
   m_TagString: Untagged
@@ -101,7 +104,7 @@ Animator:
   m_GameObject: {fileID: 157130617231764704}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 93af2230410234e47b2255527aac6248, type: 2}
+  m_Controller: {fileID: 9100000, guid: f664ba0b53ad64ab9863e58298e411d7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -111,7 +114,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4654261480510503302
+--- !u!114 &5989671087377724644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,6 +123,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 157130617231764704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04f5c4f26745b49db805252c65ca5f0e, type: 3}
+  m_Script: {fileID: 11500000, guid: cd1a38261733e4b6abe9548a4a234844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6358739586473183857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157130617231764704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580a8a08d2044245b7e5dcf8b4487f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  landscapes: []
+--- !u!114 &2532899929959745572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157130617231764704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc0bdd82c3ad48fd88757d35fcc8c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 7
+  heroData: {fileID: 11400000, guid: b0c38bf69500d404bb5ec87d39f3f128, type: 2}
+--- !u!114 &4561737818235946715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157130617231764704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb9bb34ec7a3b4fdc9fcc0666fcc92d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMoving: 0
+  path: []
