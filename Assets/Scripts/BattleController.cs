@@ -6,7 +6,6 @@ public class BattleController : MonoBehaviour
 {
     public static BattleHex targetToMove;
     public static Hero currentAtacker;
-    [SerializeField] CharAttributes charAttributes;
 
     void Awake()
     {
