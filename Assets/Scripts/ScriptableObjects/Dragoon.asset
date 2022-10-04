@@ -17,6 +17,6 @@ MonoBehaviour:
   hp: 0
   atack: 0
   resistance: 0
-  stack: 0
+  stack: 50
   heroSprite: {fileID: -138737832, guid: 2f58117496d0743bbac6a8af7bccad94, type: 3}
   heroSO: {fileID: 6994370733016578203, guid: 3e6641d60b67a4dbc8f69e8ae487b2c5, type: 3}
