@@ -25,12 +25,12 @@ public class FieldManager : MonoBehaviour
     private void Start()
     {
         IdentifyHexes();
-        AvailablePos hero = FindObjectOfType<AvailablePos>();
-        IAdjacentFinder adjFinder = new PositionForFlying();
-        BattleHex startingHex = hero.GetComponentInParent<BattleHex>();
-        int stepsLimit = BattleController.currentAtacker.velocity;
-        startingHex.DefineSelfAsStartingHex();
-        hero.GetAvailablePositions(hero.GetComponentInParent<BattleHex>(), stepsLimit, adjFinder);
+        //AvailablePos hero = FindObjectOfType<AvailablePos>();
+        //IAdjacentFinder adjFinder = new PositionForFlying();
+        //BattleHex startingHex = hero.GetComponentInParent<BattleHex>();
+        //int stepsLimit = BattleController.currentAtacker.velocity;
+        //startingHex.DefineSelfAsStartingHex();
+        //hero.GetAvailablePositions(hero.GetComponentInParent<BattleHex>(), stepsLimit, adjFinder);
     }
 
     private void CreateAllHexesArray()

@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac68cd0a8f42d474ea3931db98d5bfbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTargetHex: 0
+  isTargetToMove: 0
   fieldManager: {fileID: 0}
 --- !u!1001 &6632021366851906288
 PrefabInstance:
@@ -467,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1264221316616663786, guid: 394a581d24c05475e8e7d407f3b323d0, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0.35000002
       objectReference: {fileID: 0}
     - target: {fileID: 1264221316616663786, guid: 394a581d24c05475e8e7d407f3b323d0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -475,7 +475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1264221316616663786, guid: 394a581d24c05475e8e7d407f3b323d0, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 1264221316616663786, guid: 394a581d24c05475e8e7d407f3b323d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -511,7 +511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1264221316616663786, guid: 394a581d24c05475e8e7d407f3b323d0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1264221316616663786, guid: 394a581d24c05475e8e7d407f3b323d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

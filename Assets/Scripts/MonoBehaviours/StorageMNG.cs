@@ -42,6 +42,7 @@ public class StorageMNG : MonoBehaviour
             }
         }
         clickedIcon.background.sprite = selectIcon;
+        Deployer.readyForDeploymentIcon = clickedIcon;
     }
 
     internal void ReturnRegiment(CharIcon clickedIcon)

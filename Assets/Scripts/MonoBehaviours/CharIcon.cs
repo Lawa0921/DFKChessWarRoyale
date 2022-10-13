@@ -11,6 +11,13 @@ public class CharIcon : MonoBehaviour
     [SerializeField] internal CharAttributes charAttributes;
     internal bool deployed = false;
 
+    StorageMNG storage;
+
+    private void Start()
+    {
+        storage = GetComponentInParent<StorageMNG>();
+    }
+
     internal void FillIcon()
     {
         heroImage.sprite = charAttributes.heroSprite;
@@ -28,5 +35,11 @@ public class CharIcon : MonoBehaviour
         {
             storage.ReturnRegiment(this);
         }
+    }
+
+    public void HeroIsDeployed()
+    {
+        background.sprite = storage.deployedRegimant;
+        deployed = true;
     }
 }
