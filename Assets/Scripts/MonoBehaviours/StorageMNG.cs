@@ -47,6 +47,22 @@ public class StorageMNG : MonoBehaviour
 
     internal void ReturnRegiment(CharIcon clickedIcon)
     {
+        CharAttributes SOofRegiment = clickedIcon.charAttributes;
+        Hero[] regimentsOnBattleField = FindObjectsOfType<Hero>();
+        foreach (Hero hero in regimentsOnBattleField)
+        {
+            if (hero.heroData == SOofRegiment)
+            {
+                RemoveHero(hero);
+                break;
+            }
+        }
+    }
 
+    void RemoveHero(Hero hero)
+    {
+        BattleHex parentHex = hero.GetComponentInParent<BattleHex>();
+        parentHex.MakeDeploymentPosition();
+        Destroy(hero.gameObject);
     }
 }
