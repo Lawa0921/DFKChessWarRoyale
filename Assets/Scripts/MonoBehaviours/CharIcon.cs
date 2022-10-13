@@ -16,6 +16,7 @@ public class CharIcon : MonoBehaviour
     private void Start()
     {
         storage = GetComponentInParent<StorageMNG>();
+        StorageMNG.OnRemoveHero += ReturnDefaultState;
     }
 
     internal void FillIcon()
@@ -33,6 +34,7 @@ public class CharIcon : MonoBehaviour
         }
         else
         {
+            storage.RemoveHeroUsingObserver(charAttributes);
             storage.ReturnRegiment(this);
         }
     }
@@ -41,5 +43,14 @@ public class CharIcon : MonoBehaviour
     {
         background.sprite = storage.deployedRegimant;
         deployed = true;
+    }
+
+    public void ReturnDefaultState(CharAttributes selectedCharAttributes)
+    {
+        if (selectedCharAttributes == charAttributes)
+        {
+            background.sprite = GetComponentInParent<StorageMNG>().defaultIcon;
+            deployed = false;
+        }
     }
 }

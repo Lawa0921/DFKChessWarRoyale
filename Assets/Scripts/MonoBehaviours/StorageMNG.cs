@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class StorageMNG : MonoBehaviour
     [SerializeField] internal Sprite selectIcon;
     [SerializeField] internal Sprite defaultIcon;
     [SerializeField] internal Sprite deployedRegimant;
+    public static event Action<CharAttributes> OnRemoveHero;
 
     void Start()
     {
@@ -64,5 +66,10 @@ public class StorageMNG : MonoBehaviour
         BattleHex parentHex = hero.GetComponentInParent<BattleHex>();
         parentHex.MakeDeploymentPosition();
         Destroy(hero.gameObject);
+    }
+
+    public void RemoveHeroUsingObserver(CharAttributes SOHero)
+    {
+        OnRemoveHero(SOHero);
     }
 }
