@@ -9,6 +9,9 @@ public class StorageMNG : MonoBehaviour
     [SerializeField] CharIcon iconPrefab;
     List<CharAttributes> regimentIcons = new List<CharAttributes>();
     ScrollRect scrollRect;
+    [SerializeField] internal Sprite selectIcon;
+    [SerializeField] internal Sprite defaultIcon;
+    [SerializeField] internal Sprite deployedRegimant;
 
     void Start()
     {
@@ -26,5 +29,23 @@ public class StorageMNG : MonoBehaviour
             fighterIcon.charAttributes = regimentIcons[i];
             fighterIcon.FillIcon();
         }
+    }
+
+    internal void TintIcon(CharIcon clickedIcon)
+    {
+        CharIcon[] charIcons = GetComponentsInChildren<CharIcon>();
+        foreach (CharIcon icon in charIcons)
+        {
+            if (!icon.deployed)
+            {
+                icon.background.sprite = defaultIcon;
+            }
+        }
+        clickedIcon.background.sprite = selectIcon;
+    }
+
+    internal void ReturnRegiment(CharIcon clickedIcon)
+    {
+
     }
 }

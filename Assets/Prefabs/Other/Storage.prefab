@@ -315,3 +315,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentProgress: {fileID: 0}
   iconPrefab: {fileID: 0}
+  selectIcon: {fileID: 21300000, guid: 8faafd627b3154084948fe9348b4ba28, type: 3}
+  defaultIcon: {fileID: 21300000, guid: eac35f8d6192d4bf6861098623ce2a2f, type: 3}
+  deployedRegimant: {fileID: 21300000, guid: 07eb91a12ea604e8a9c4cd548e224dc2, type: 3}
