@@ -7,4 +7,5 @@ using UnityEngine;
 public class CurrentProgress : ScriptableObject
 {
     [SerializeField] internal List<CharAttributes> heroesOfPlayer;
+    [SerializeField] internal List<CharAttributes> enemies;
 }

@@ -20,11 +20,12 @@ public class FieldManager : MonoBehaviour
             allRows[i].allHexesInRow = allRows[i].GetComponentsInChildren<BattleHex>();
         }
         CreateAllHexesArray();
+        IdentifyHexes();
     }
 
     private void Start()
     {
-        IdentifyHexes();
+        //IdentifyHexes();
         //AvailablePos hero = FindObjectOfType<AvailablePos>();
         //IAdjacentFinder adjFinder = new PositionForFlying();
         //BattleHex startingHex = hero.GetComponentInParent<BattleHex>();
@@ -72,7 +73,7 @@ public class FieldManager : MonoBehaviour
         {
             if (hex.battleHexState == HexState.active)
             {
-                activeHexList.Add(hex);
+                FieldManager.activeHexList.Add(hex);
             }
         }
     }

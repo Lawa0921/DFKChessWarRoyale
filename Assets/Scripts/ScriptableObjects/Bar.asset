@@ -15,3 +15,6 @@ MonoBehaviour:
   heroesOfPlayer:
   - {fileID: 11400000, guid: 50cc0058f2c894d469bc8ad4e22ea274, type: 2}
   - {fileID: 11400000, guid: b0c38bf69500d404bb5ec87d39f3f128, type: 2}
+  enemies:
+  - {fileID: 11400000, guid: 024ad6d98c2f240f28e693a299458282, type: 2}
+  - {fileID: 11400000, guid: de8aaacacb64748f0aac5135452a3c8d, type: 2}

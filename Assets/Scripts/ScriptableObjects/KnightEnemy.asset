@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f952a2e50249e41baa2fd456269694be, type: 3}
+  m_Name: KnightEnemy
+  m_EditorClassIdentifier: 
+  velocity: 0
+  initiative: 0
+  hp: 0
+  atack: 0
+  resistance: 0
+  stack: 50
+  heroSprite: {fileID: -1963550761, guid: a04a92aa801244801955df406a1e72a3, type: 3}
+  heroSO: {fileID: 2532899929959745572, guid: 18190ea95c6c44fc6887e03496ec4536, type: 3}

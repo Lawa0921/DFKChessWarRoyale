@@ -7059,6 +7059,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 444535149}
     m_Modifications:
+    - target: {fileID: 5312941991052081412, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
+      propertyPath: regimentPosition
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8467418528621214262, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
       propertyPath: m_Name
       value: Plane00 (17)
@@ -21767,6 +21771,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1241248084}
     m_Modifications:
+    - target: {fileID: 3211225433097703317, guid: a8940b145dcdc4646a07cd5e832d044b, type: 3}
+      propertyPath: regimentPosition
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8467418528621214262, guid: a8940b145dcdc4646a07cd5e832d044b, type: 3}
       propertyPath: m_Name
       value: Marsh00
