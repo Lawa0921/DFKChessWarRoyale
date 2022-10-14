@@ -11,7 +11,7 @@ public abstract class Hero : MonoBehaviour
 
     private void Start()
     {
-        StorageMNG.OnRemoveHero += DestroyMe;
+        StorageMNG.OnClickOnGrayIcon += DestroyMe;
     }
 
     private void DestroyMe(CharAttributes SOHero)
@@ -22,5 +22,10 @@ public abstract class Hero : MonoBehaviour
             parentHex.MakeDeploymentPosition();
             Destroy(gameObject);
         }
+    }
+
+    private void OnDisable()
+    {
+        StorageMNG.OnClickOnGrayIcon -= DestroyMe;
     }
 }

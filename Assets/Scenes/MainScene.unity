@@ -5711,6 +5711,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1259161932}
     m_Modifications:
     - target: {fileID: 5312941991052081412, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
+      propertyPath: regimentPosition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5312941991052081412, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
       propertyPath: positionForRegiment
       value: 1
       objectReference: {fileID: 0}
@@ -28620,6 +28624,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 444535149}
     m_Modifications:
+    - target: {fileID: 5312941991052081412, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
+      propertyPath: regimentPosition
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8467418528621214262, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
       propertyPath: m_Name
       value: Plane00 (21)
@@ -45795,6 +45803,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1241248084}
     m_Modifications:
+    - target: {fileID: 5312941991052081412, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
+      propertyPath: regimentPosition
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8467418528621214262, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
       propertyPath: m_Name
       value: Plane00 (20)
@@ -48486,6 +48498,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 616417781}
     m_Modifications:
+    - target: {fileID: 5312941991052081412, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
+      propertyPath: regimentPosition
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8467418528621214262, guid: e530f0a202ddf43809ecfaa8e2035ec8, type: 3}
       propertyPath: m_Name
       value: Plane00 (2)

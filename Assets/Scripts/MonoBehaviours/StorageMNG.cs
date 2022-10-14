@@ -14,6 +14,8 @@ public class StorageMNG : MonoBehaviour
     [SerializeField] internal Sprite defaultIcon;
     [SerializeField] internal Sprite deployedRegimant;
     public static event Action<CharAttributes> OnRemoveHero;
+    public delegate void DeleteHero(CharAttributes SOofHero);
+    public static event DeleteHero OnClickOnGrayIcon;
 
     void Start()
     {
@@ -47,20 +49,6 @@ public class StorageMNG : MonoBehaviour
         Deployer.readyForDeploymentIcon = clickedIcon;
     }
 
-    internal void ReturnRegiment(CharIcon clickedIcon)
-    {
-        CharAttributes SOofRegiment = clickedIcon.charAttributes;
-        Hero[] regimentsOnBattleField = FindObjectsOfType<Hero>();
-        foreach (Hero hero in regimentsOnBattleField)
-        {
-            if (hero.heroData == SOofRegiment)
-            {
-                RemoveHero(hero);
-                break;
-            }
-        }
-    }
-
     void RemoveHero(Hero hero)
     {
         BattleHex parentHex = hero.GetComponentInParent<BattleHex>();
@@ -68,8 +56,8 @@ public class StorageMNG : MonoBehaviour
         Destroy(hero.gameObject);
     }
 
-    public void RemoveHeroUsingObserver(CharAttributes SOHero)
+    public void RemoveRegiment(CharAttributes SOHero)
     {
-        OnRemoveHero(SOHero);
+        OnClickOnGrayIcon(SOHero);
     }
 }
