@@ -19,7 +19,6 @@ namespace TbsFramework.EditorUtils.GridGenerators
         public abstract GridInfo GenerateGrid();
         protected GridInfo GetGridInfo(List<Cell> cells)
         {
-
             var minX = cells.Find(c => c.transform.position.x.Equals(cells.Min(c2 => c2.transform.position.x))).transform.position.x;
             var maxX = cells.Find(c => c.transform.position.x.Equals(cells.Max(c2 => c2.transform.position.x))).transform.position.x;
 
