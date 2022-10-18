@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 9a169ac8bc6814f9aa96237dc8cd9692, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -142,10 +142,15 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2569367188296297742, guid: 65a5fb968fca6574eba0afc56979826a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5103678040068229388, guid: 65a5fb968fca6574eba0afc56979826a,
         type: 3}
       propertyPath: m_Name
-      value: Plane_01 1
+      value: ForestPineSnowCovered_01
       objectReference: {fileID: 0}
     - target: {fileID: 6585455905954854484, guid: 65a5fb968fca6574eba0afc56979826a,
         type: 3}
