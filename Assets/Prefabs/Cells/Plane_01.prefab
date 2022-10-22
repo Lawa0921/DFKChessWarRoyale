@@ -147,6 +147,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plane_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5580679484645134133, guid: 65a5fb968fca6574eba0afc56979826a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0066bab3ce80cac4c9d1848c6bda513d,
+        type: 3}
     - target: {fileID: 6585455905954854484, guid: 65a5fb968fca6574eba0afc56979826a,
         type: 3}
       propertyPath: m_RootOrder
@@ -212,6 +218,16 @@ PrefabInstance:
       propertyPath: MovementCost
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8614167311785638178, guid: 65a5fb968fca6574eba0afc56979826a,
+        type: 3}
+      propertyPath: Renderer
+      value: 
+      objectReference: {fileID: 6218453713003170787}
+    - target: {fileID: 9088401217050765977, guid: 65a5fb968fca6574eba0afc56979826a,
+        type: 3}
+      propertyPath: Renderer
+      value: 
+      objectReference: {fileID: 6218453713003170787}
     m_RemovedComponents:
     - {fileID: 7857082151614823283, guid: 65a5fb968fca6574eba0afc56979826a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 65a5fb968fca6574eba0afc56979826a, type: 3}
@@ -251,3 +267,9 @@ MonoBehaviour:
   IsTaken: 0
   MovementCost: 1
   TileType: Plane
+--- !u!212 &6218453713003170787 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2569367188296297742, guid: 65a5fb968fca6574eba0afc56979826a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8495015319699629805}
+  m_PrefabAsset: {fileID: 0}
