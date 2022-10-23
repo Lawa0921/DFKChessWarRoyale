@@ -1,19 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.UI;
 
-public class HomePageManager : MonoBehaviour
-{
+public class HomePageManager : MonoBehaviour {
+    [SerializeField] private GameObject AddressInput;
+    public const string HEXPATTERN = @"([^A-Fa-f0-9]|\s+?)+";
+
     public void OnClickLogin()
     {
-        PhotonNetwork.ConnectUsingSettings();
-        print("clicked login");
+        string inputAddress = AddressInput.GetComponent<InputField>().text;
+
+        if (IsVaildAddress(inputAddress))
+        {
+            Debug.Log(inputAddress);
+        }
+        else
+        {
+            Debug.Log("address format is invaild");
+        }
     }
 
-    public void OnClickSignUp()
+    private bool IsVaildAddress(string address)
     {
-        PhotonNetwork.ConnectUsingSettings();
-        print("clicked sign up");
+        return address.Length == 42 && address.StartsWith("0x") && System.Text.RegularExpressions.Regex.IsMatch(address, HEXPATTERN); ;
     }
 }
