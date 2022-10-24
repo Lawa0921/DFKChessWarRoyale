@@ -4,16 +4,15 @@ using System;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
+using System.Text.RegularExpressions;
 
 public class HomePageManager : MonoBehaviour {
     [SerializeField] private GameObject AddressInput;
-    public const string HEXPATTERN = @"([^A-Fa-f0-9]|\s+?)+";
-
     public void OnClickLogin()
     {
         string inputAddress = AddressInput.GetComponent<InputField>().text;
 
-        if (IsVaildAddress(inputAddress))
+        if (IsAddress(inputAddress))
         {
             Debug.Log(inputAddress);
         }
@@ -23,8 +22,10 @@ public class HomePageManager : MonoBehaviour {
         }
     }
 
-    private bool IsVaildAddress(string address)
+    private bool IsAddress(string address)
     {
-        return address.Length == 42 && address.StartsWith("0x") && System.Text.RegularExpressions.Regex.IsMatch(address, HEXPATTERN); ;
+        Regex reg = new Regex("^0x[a-fA-F0-9]{40}$");
+
+        return reg.IsMatch(address);
     }
 }
